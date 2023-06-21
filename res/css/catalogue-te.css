@@ -1,0 +1,131 @@
+/* Config par défaut */
+
+:root{
+    --bleu-te:#1e88e5;
+    --bleu-te2:#002f75;
+    --gris-te:#eee;
+    --gris-foncé-te:#BFBFBF;
+    --noir-te:#404040;
+}
+*{
+    margin: 0;
+    font-family:  Calibri, sans-serif;
+    color: var(--noir-te);
+    /* font: 11pt Arial,sans-serif; */
+}
+
+/* Mise en page générale */
+
+header{
+    background-color: var(--gris-te);
+    display: flex;
+    align-items: center;
+    border-bottom: var(--bleu-te) solid 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+h1{
+    color: var(--bleu-te);
+    padding-left: 20px;
+}
+a{
+    color: var(--bleu-te);
+}
+main{
+    margin-bottom: 15px;
+}
+footer{
+    color: #404040;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    background-color: var(--gris-te);
+}
+.wip{
+    color: var(--noir-te);
+    background-color: yellow;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+#sommaire{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+#sommaire button{
+    background-color: var(--bleu-te);
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    font-size: large;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+#sommaire button:hover{
+    background-color: var(--gris-foncé-te);
+}
+
+/* Mise en page contenu */
+
+.categorie{
+    background-color: var(--gris-te);
+    border-radius: 5px;
+    padding: 15px;
+}
+.titre{
+    color: var(--bleu-te);
+    font-size: larger;
+    margin-bottom: 10px;
+}
+.train{
+    border: var(--noir-te) 2px solid;
+    border-radius: 20px;
+    background-color: white;
+    margin: 10px 0;
+    height: 100%;
+    overflow: hidden;
+}
+.template{
+    background-image: url("../img/Voie_25kV.png");
+    background-size: contain;
+    min-height: 90px;
+    position: relative;
+}
+.template>img{
+    align-content: end;
+    overflow: hidden;
+    margin: 10px 0 0 10px;
+    position: absolute;
+    bottom: 6px;
+}
+.nom{
+    background-color: var(--bleu-te);
+    color: white;
+    /* border-radius: 0 0 20px 20px ; */
+    padding-left: 15px;
+    font-size: large;
+}
+.outOfTE{background-color: var(--gris-te); color: black;}
+.tensions{
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+.tension{
+    max-width: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 5px;
+}
+.teTrain{
+    max-height: 15px;
+    margin: 0;
+}
