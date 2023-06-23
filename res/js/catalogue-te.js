@@ -378,7 +378,8 @@ const catalogue = [
             {
                 "nom":"S-102 / S-112",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1072289749672407050/Talgo_S102_Blanche.png",
-                "tensions":["25kV_lac"]
+                "tensions":["25kV_lac"],
+		"outOfTE":true
             },
             {
                 "nom":"Siemens ICE 1 / BR 401 ",
@@ -393,7 +394,8 @@ const catalogue = [
             {
                 "nom":"Siemens ICE 2 / BR 402 - version bi-motrices",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1121047928283349034/image.png",
-                "tensions":["15kV_lac"]
+                "tensions":["15kV_lac"],
+		"outOfTE":true
             },
             {
                 "nom":"Siemens ICE 3M / BR 406",
@@ -403,7 +405,8 @@ const catalogue = [
             {
                 "nom":"Siemens TGV",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1121065924057911367/image.png",
-                "tensions":["1,5kV_lac","25kV_lac"]
+                "tensions":["1,5kV_lac","25kV_lac"],
+		"outOfTE":true
             },
             {
                 "nom":'Skoda CityElefant',
