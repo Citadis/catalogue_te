@@ -6,18 +6,18 @@ window.onload = function(){
     //     return response.blob()
     // })
     loadTrains(catalogue)
-
+    
     /*
     Notes de travail : 
     - A faire : Passage en V2 de la page via fetch sur serveur TCS pour aller chercher les trains plutôt qu'un objet JSON ici.
     - A faire : Mode sombre ? Thème TE2 ? Via interupteur à 3 positions
     */
-
+    
 }
 /**
- * Load les trains sur la page au chargement.
- * @param {catalogue} data
- */
+* Load les trains sur la page au chargement.
+* @param {catalogue} data
+*/
 function loadTrains(data) {
     debug?console.log("2. OK"):null;
     newHTML = ""
@@ -60,15 +60,15 @@ function loadTrains(data) {
     Nouvelle disposition : 
     div class=Train
     ∟ div class=template
-        ∟ img du train
-        ∟ div class=tensions
-            ∟ img tensions
+    ∟ img du train
+    ∟ div class=tensions
+    ∟ img tensions
     ∟ div class=nom
-        ∟ div nom du train
-
-
-
-
+    ∟ div nom du train
+    
+    
+    
+    
     */
 }
 
@@ -81,7 +81,7 @@ const catalogue = [
                 "image":"",
                 "tensions":["TE","TH","750V_3eR","850V_3eR","750V_lac","1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","rev"],
                 "outOfTE":true
-
+                
             },
             {
                 "nom":'Si ce bandeau est bleu, le train est présent et réutilisable dans Train-Empire',
@@ -123,20 +123,20 @@ const catalogue = [
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1072902626053722172/br218.png",
                 "tensions":["TH"]
             },
-	    {
-		"nom":"CC 72000 - attelages Scharfenberg",
-		"image":"https://cdn.discordapp.com/attachments/1066014807888756756/1121802995139629128/CC72000_TGV_usine.png",
-		"tensions":["TH"]
+            {
+                "nom":"CC 72000 - attelages Scharfenberg",
+                "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1121802995139629128/CC72000_TGV_usine.png",
+                "tensions":["TH"]
             },
-	    {
-		"nom":"CC 73000",
-		"image":"https://cdn.discordapp.com/attachments/1066014807888756756/1164634923613823086/CC73000.png",
-		"tensions":["TH"]
+            {
+                "nom":"CC 73000",
+                "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1164634923613823086/CC73000.png",
+                "tensions":["TH"]
             },
-	    {
-		"nom":"CC 73000 - bas de caisse gris",
-		"image":"https://cdn.discordapp.com/attachments/1066014807888756756/1164635696410140692/CC73000.png",
-		"tensions":["TH"]
+            {
+                "nom":"CC 73000 - bas de caisse gris",
+                "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1164635696410140692/CC73000.png",
+                "tensions":["TH"]
             },
             {
                 "nom":'Class 08',
@@ -150,7 +150,7 @@ const catalogue = [
             },
             {
                 "nom":'Class 08 - neutre UK',
-                "https://media.discordapp.net/attachments/1066014807888756756/1174419768552472607/Class08b.png",
+                "image":"https://media.discordapp.net/attachments/1066014807888756756/1174419768552472607/Class08b.png",
                 "tensions":["TH"]
             },
             {
@@ -158,7 +158,7 @@ const catalogue = [
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1174419768904798239/Class08b_r.png",
                 "tensions":["TH"]
             },
-	    {
+            {
                 "nom":'Class 08 - neutre UK, toit gris',
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1174752317329915995/Class08fb.png",
                 "tensions":["TH"]
@@ -218,7 +218,7 @@ const catalogue = [
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1073196723977080852/bb9300.png",
                 "tensions":["1,5kV_lac"]
             },
-	    {
+            {
                 "nom":"BB 26000",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1121800855226691624/image.png",
                 "tensions":["1,5kV_lac","25kV_lac"]
@@ -280,7 +280,7 @@ const catalogue = [
                 "tensions":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac"],
                 "outOfTE":false
             },
-	    {
+            {
                 "nom":'Class 76',
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1164278750674948137/Class76.png",
                 "tensions":["1,5kV_lac"]
@@ -350,7 +350,7 @@ const catalogue = [
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1122868806109384765/image.png",
                 "tensions":["TH"]
             },
-	    {
+            {
                 "nom":"Class 170 / Class 171 - 2 voitures (171/7), neutre UK",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1117743869442920499/image.png",
                 "tensions":["TH"]
@@ -360,12 +360,12 @@ const catalogue = [
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1122869251020173382/image.png",
                 "tensions":["TH"]
             },
-	    {
+            {
                 "nom":"Class 171 - 4 voitures (171/8), neutre UK",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1117743956730593280/image.png",
                 "tensions":["TH"]
             },
-	    {
+            {
                 "nom":"S-594",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1172226176949964840/S594.png",
                 "tensions":["TH"]
@@ -389,7 +389,7 @@ const catalogue = [
                 "nom":"Alstom AGV",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1066075408807768174/Alstom_AGV575.png",
                 "tensions":["1,5kV_lac","25kV_lac"],
-		        "outOfTE":true
+                "outOfTE":true
             },
             {
                 "nom":"Alstom ICE Duplex (f)",
@@ -437,17 +437,17 @@ const catalogue = [
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1081153101639204884/2839.png",
                 "tensions":["15kV_lac","25kV_lac"]
             },
-		{
+            {
                 "nom":"BR 403 (I) / ET 403",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1164278612896272494/BR403I.png",
                 "tensions":["15kV_lac"]
             },
-	    {
+            {
                 "nom":"BR 425",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1081153101639204884/2839.png",
                 "tensions":["15kV_lac"]
             },
-	    {
+            {
                 "nom":"BR 481.5",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1124270830285750282/image.png",
                 "tensions":["750V_3eR"]
@@ -457,22 +457,22 @@ const catalogue = [
                 "image":"https://media.discordapp.net/attachments/468051157135392789/1072821298817937469/br-421-1.png",
                 "tensions":["750V_3eR"]
             },
-	    {
+            {
                 "nom":'Class 442 - neutre UK (1s)',
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1136232865303121950/Template_Class_442_1s.png",
                 "tensions":["750V_3eR"]
             },
-    	    {
+            {
                 "nom":'Class 442 - neutre UK (2s)',
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1136024384386125895/Template_Class_442.png",
                 "tensions":["750V_3eR"]
             },
-	    {
+            {
                 "nom":'Class 442 - neutre UK (refurb)',
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1136027309212704838/NSE_Class_442_refurb.png",
                 "tensions":["750V_3eR"]
             },
-	    {
+            {
                 "nom":"Class 460 - neutre UK, première caisse",
                 "image":"https://cdn.discordapp.com/attachments/468051157135392789/1072821298994085959/br-460-head.png",
                 "tensions":["750V_3eR"]
@@ -486,7 +486,7 @@ const catalogue = [
                 "nom":"S-102 / S-112",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1072289749672407050/Talgo_S102_Blanche.png",
                 "tensions":["25kV_lac"],
-		"outOfTE":true
+                "outOfTE":true
             },
             {
                 "nom":"Siemens ICE 1 / BR 401 ",
@@ -502,7 +502,7 @@ const catalogue = [
                 "nom":"Siemens ICE 2 / BR 402 - version bi-motrices",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1121047928283349034/image.png",
                 "tensions":["15kV_lac"],
-		"outOfTE":true
+                "outOfTE":true
             },
             {
                 "nom":"Siemens ICE 3M / BR 406",
@@ -513,7 +513,7 @@ const catalogue = [
                 "nom":"Siemens TGV",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1121065924057911367/image.png",
                 "tensions":["1,5kV_lac","25kV_lac"],
-		"outOfTE":true
+                "outOfTE":true
             },
             {
                 "nom":'Skoda CityElefant',
@@ -521,12 +521,12 @@ const catalogue = [
                 "tensions":["3kV_lac"],
                 "outOfTE":true
             },
-	    {
+            {
                 "nom":'Z 7100 Modernisée',
-                "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1180840199379492864/Z7100_GRG_R.png",https://cdn.discordapp.com/attachments/1066014807888756756/1180840199849250826/Z7100_GRG.png
+                "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1180840199379492864/Z7100_GRG_R.png",
                 "tensions":["1,5kV_lac"]
             },
-	    {
+            {
                 "nom":'Z 7100 Modernisée - panto à droite',
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1180840199849250826/Z7100_GRG.png",
                 "tensions":["1,5kV_lac"]
@@ -556,7 +556,7 @@ const catalogue = [
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1066048497004056636/Z20900_Blanc.png",
                 "tensions":["1,5kV_lac","25kV_lac"]
             },
-	    {
+            {
                 "nom":"Z 23000",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1159109190342688798/Z23000.png",
                 "tensions":["1,5kV_lac"]
@@ -611,13 +611,13 @@ const catalogue = [
                 "nom":"Régiolis 6 caisses - vitres noires",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1072924118330114049/regiolis-6c-1.png",
                 "tensions":["TH","1,5kV_lac","15kV_lac","25kV_lac"]
-
+                
             },
             {
                 "nom":"Régiolis 6 caisses - vitres blanches",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1072924118107824128/regiolis-6c.png",
                 "tensions":["TH","1,5kV_lac","15kV_lac","25kV_lac"]
-
+                
             },
         ]
     },
@@ -688,13 +688,13 @@ const catalogue = [
                 "nom":"VB2N",
                 "image":"https://media.discordapp.net/attachments/1066014807888756756/1097896554863546488/VB2N_template.png",
                 "tensions":[]
-
+                
             },
             {
                 "nom":"VE2N",
                 "image":"https://cdn.discordapp.com/attachments/1066014807888756756/1072902647163658280/ve2n.png",
                 "tensions":[]
-
+                
             },
             {
                 "nom":'RailJet (type ÖBB)',
