@@ -78,14 +78,14 @@ const catalogue = [
         "trains" : [
             {
                 "nom":'Index Pictogrames',
-                "image":"",
+                "image":"https://img.shields.io/badge/Dernière_mise_à_jour-03/12/2023-blue?style=for-the-badge",
                 "tensions":["TE","TH","750V_3eR","850V_3eR","750V_lac","1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","rev"],
                 "outOfTE":true
                 
             },
             {
                 "nom":'Si ce bandeau est bleu, le train est présent et réutilisable dans Train-Empire',
-                "image":"https://img.shields.io/badge/Dernière_mise_à_jour-03/12/2023-blue?style=for-the-badge",
+                "image":"",
                 "tensions":["TE"]
             },
             // {
