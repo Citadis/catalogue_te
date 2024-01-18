@@ -9,7 +9,6 @@ window.onload = function(){
     
     /*
     Notes de travail : 
-    - A faire : possibilitée de mettre plusieurs images par ligne.
     - A faire : Passage en V2 de la page via fetch sur serveur TCS pour aller chercher les trains plutôt qu'un objet JSON ici.
     - A faire : Mode sombre ? Thème TE2 ? Via interupteur à 3 positions
     */
