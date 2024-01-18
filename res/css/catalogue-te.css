@@ -99,12 +99,12 @@ footer{
     min-height: 90px;
     position: relative;
 }
-.template>img{
+.images{
     align-content: end;
     overflow: hidden;
     margin: 10px 0 0 10px;
     position: absolute;
-    bottom: 6px;
+    bottom: 2px;
 }
 .nom{
     background-color: var(--bleu-te);
