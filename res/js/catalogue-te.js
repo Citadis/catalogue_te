@@ -127,6 +127,11 @@ const catalogue = [
         "categorie" : "Locomotives diesel polyvalantes",
         "trains" : [
             {
+                "nom":"2CC2 61000 (f)",
+                "image":"./res/img/trains/2CC2.png",
+                "tensions":["TH"]
+            },
+            {
                 "nom":"BR 218",
                 "image":"./res/img/trains/br218.png",
                 "tensions":["TH"]
@@ -135,6 +140,11 @@ const catalogue = [
                 "nom":"BB 62400 / NS 2400",
                 "image":"./res/img/trains/BB62400.png",
                 "tensions":["TH","um4"]
+            },
+            {
+                "nom":"BB 67400",
+                "image":"./res/img/trains/template_BB67400.png",
+                "tensions":["TH","um2","rev"]
             },
             {
                 "nom":"BB 73000",
@@ -177,6 +187,11 @@ const catalogue = [
                 "tensions":["TH"]
             },
             {
+                "nom":'Class 45',
+                "image":"./res/img/trains/Class45.png",
+                "tensions":["TH"]
+            },
+            {
                 "nom":"D445",
                 "image":"./res/img/trains/D445.png",
                 "tensions":["TH"]
@@ -196,6 +211,16 @@ const catalogue = [
     {   // Loc Diesel fret
         "categorie" : "Locomotives diesel fret",
         "trains" : [
+            {
+                "nom":"BB 300",
+                "image":"./res/img/trains/BB300.png",
+                "tensions":["TH","um"]
+            },
+            {
+                "nom":"BB 69200",
+                "image":"./res/img/trains/template_BB_69200.png",
+                "tensions":["TH","um"]
+            },
             {
                 "nom":"Class 77",
                 "image":"./res/img/trains/class77.png",
@@ -237,6 +262,11 @@ const catalogue = [
                 "tensions":["1,5kV_lac"]
             },
             {
+                "nom":"BB 22200",
+                "image":"./res/img/trains/BB22200.png",
+                "tensions":["1,5kV_lac","25kV_lac"]
+            },
+            {
                 "nom":"BB 26000",
                 "image":"./res/img/trains/BB26000.png",
                 "tensions":["1,5kV_lac","25kV_lac"]
@@ -274,6 +304,11 @@ const catalogue = [
             {
                 "nom":'BR 152',
                 "image":"./res/img/trains/br152.png",
+                "tensions":["15kV_lac"]
+            },
+            {
+                "nom":'BR 155',
+                "image":"./res/img/trains/BR155.png",
                 "tensions":["15kV_lac"]
             },
             {
@@ -339,15 +374,35 @@ const catalogue = [
                 "tensions":["1,5kV_lac","3kV_lac","25kV_lac"],
             },
             {
+                "nom":"NS 1600 Benelux",
+                "image":"./res/img/trains/NS 1600.png",
+                "tensions":["1,5kV_lac","3kV_lac","25kV_lac"],
+            },
+            {
                 "nom":'Re460',
                 "image":"./res/img/trains/re460.png",
                 "tensions":["15kV_lac"]
             }
         ]
     },
+    {   // Loc bimode
+        "categorie" : "Locomotives Bimodes",
+        "trains" : [
+            {
+                "nom": 'BB+BB99000 (f)',
+                "image":"./res/img/trains/BBBB99000.png",
+                "tensions": ['1,5kV_lac', '25kV_lac', 'TH']
+            }
+                ]
+    },
     {   // Autorails
         "categorie" : "Autorails",
         "trains" : [
+            {
+                "nom":'BR 515',
+                "image":"./res/img/trains/BR515.png",
+                "tensions":["TH"]
+            },
             {
                 "nom":'BR 708 / ORT 135.7',
                 "image":"./res/img/trains/BR708.png",
@@ -429,6 +484,11 @@ const catalogue = [
         "categorie" : "Automotrices Électriques",
         "trains" : [
             {
+                "nom":"4010",
+                "image":"./res/img/trains/4010_Blanc.png",
+                "tensions":["15kV_lac"]
+            },
+            {
                 "nom":"Alstom AGV",
                 "image":"./res/img/trains/Alstom_AGV575.png",
                 "tensions":["1,5kV_lac","25kV_lac"],
@@ -453,6 +513,11 @@ const catalogue = [
                 "nom":"Alstom TGV Postal",
                 "image":"./res/img/trains/tgv_postal.png",
                 "tensions":["1,5kV_lac","25kV_lac","um2"]
+            },
+            {
+                "nom":"Alstom TGV POS",
+                "image":"./res/img/trains/tgv-pos-template.png",
+                "tensions":["1,5kV_lac","15kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Alstom TGV PSE - trumeaux gris",
@@ -526,6 +591,11 @@ const catalogue = [
                 "tensions":["1,5kV_lac","3kV_lac"]
             },
             {
+                "nom":"ETR 521",
+                "image":"./res/img/trains/ETR 521.png",
+                "tensions":["3kV_lac"]
+            },
+            {
                 "nom":"S-102 / S-112",
                 "image":"./res/img/trains/Talgo_S102_Blanche.png",
                 "tensions":["25kV_lac"],
@@ -568,6 +638,30 @@ const catalogue = [
                 "nom":'Z 2000',
                 "image":"./res/img/trains/Z2000.png",
                 "tensions":["1,5kV_lac"]
+            },
+            {
+                "nom":'Z 5100 Rénovation lourde (2c)',
+                "image":"./res/img/trains/Z 5100 2c.png",
+                "tensions":["1,5kV_lac"],
+                "outOfTE":true
+            },
+            {
+                "nom":'Z 5100 Rénovation lourde (3c)',
+                "image":"./res/img/trains/Z 5100 3c.png",
+                "tensions":["1,5kV_lac"],
+                "outOfTE":true
+            },
+            {
+                "nom":'Z 5100 Rénovation lourde (4c)',
+                "image":"./res/img/trains/Z 5100 4c.png",
+                "tensions":["1,5kV_lac"],
+                "outOfTE":true
+            },
+            {
+                "nom":'Z 5100 Rénovation lourde (2c)',
+                "image":"./res/img/trains/Z 5100 3r.png",
+                "tensions":["750V_3eR"],
+                "outOfTE":true
             },
             {
                 "nom":'Z 7100 Modernisée',
@@ -633,6 +727,11 @@ const catalogue = [
                 "nom":'Z 51500',
                 "image":"./res/img/trains/Z51500.png",
                 "tensions":["1,5kV_lac","25kV_lac","um3"]
+            },
+            {
+                "nom":"Z 54500",
+                "image":"./res/img/trains/Template_Z54500.png",
+                "tensions":["1,5kV_lac","25kV_lac","15kV_lac","um3"]
             },
             {
                 "nom":"Z 56300",
@@ -875,6 +974,11 @@ const catalogue = [
                 "tensions":[]
             },
             {
+                "nom":'USI grise',
+                "image":"./res/img/trains/USI grise.png",
+                "tensions":[]
+            },
+            {
                 "nom":'USI II',
                 "image":"./res/img/trains/USI II.png",
                 "tensions":[]
@@ -882,6 +986,11 @@ const catalogue = [
             {
                 "nom":'USI II Bar',
                 "image":"./res/img/trains/USI II Bar.png",
+                "tensions":[]
+            },
+            {
+                "nom":"Tronçon Duplex Cooper",
+                "image":"./res/img/trains/troncon_duplex.png",
                 "tensions":[]
             },
             {
@@ -894,12 +1003,27 @@ const catalogue = [
                 "nom":"VE2N",
                 "image":"./res/img/trains/ve2n.png",
                 "tensions":[]
-                
             },
             {
                 "nom":'RailJet (type ÖBB) - Rame type',
                 "image":"./res/img/trains/railjet.png",
                 "tensions":[]
+            },
+            {
+                "nom":'Voiture pilote ex-Z2',
+                "image":["./res/img/trains/Z2r.png","./res/img/trains/Z2.png"],
+                "tensions":["mir"]
+            },
+            {
+                "nom":'ZRx 17100',
+                "image":["./res/img/trains/ZRx 17100.png","./res/img/trains/ZRx 17100.png"],
+                "tensions":["mir"]
+            },
+            {
+                "nom":'ZR 27100/200',
+                "image":["./res/img/trains/ZR 27100.png","./res/img/trains/ZR 27100r.png"],
+                "tensions":["mir"],
+                "outOfTE":true
             }
         ]
     },
@@ -929,6 +1053,11 @@ const catalogue = [
             {
                 "nom":"MK3 SLEP",
                 "image":"./res/img/trains/MK3 SLEP.png",
+                "tensions":[]
+            },
+            {
+                "nom":"Falrrs 152",
+                "image":"./res/img/trains/Falrrs 152.png",
                 "tensions":[]
             }
         ]
