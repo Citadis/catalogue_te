@@ -39,7 +39,7 @@ function loadTrains(data) {
         trains.forEach(train => {
             debug?console.log("4. OK//"+train.nom):null;
             newHTML += `<div class="train">`
-            train.tensions == undefined?console.error("Train "+train.nom+" erreur tension"):null
+            train.icones == undefined?console.error("Train "+train.nom+" erreur icone"):null
             newHTML += `<div class="template">`
             newHTML += `<div class="images">`
             if(typeof train.image == 'string'){
@@ -50,9 +50,9 @@ function loadTrains(data) {
                 })
             }
             newHTML += `</div>`
-            newHTML += `<div class="tensions">`
-            train.tensions.forEach(tension => {
-                newHTML += `<img class="tension" src="./res/img/${tension}.png">`
+            newHTML += `<div class="icones">`
+            train.icones.forEach(icone => {
+                newHTML += `<img class="icone" src="./res/img/icones/${icone}.png">`
             })
             newHTML += `</div>`
             newHTML += `</div>`
@@ -69,8 +69,8 @@ function loadTrains(data) {
     div class=Train
     ∟ div class=template
         ∟ img du train
-        ∟ div class=tensions
-            ∟ img tensions
+        ∟ div class=icones
+            ∟ img icones
         ∟ div class=nom
             ∟ div nom du train
     
@@ -79,7 +79,7 @@ function loadTrains(data) {
     
     */
 }
-
+const date_maj = "09/09/2024"
 const catalogue = [
     {   // Sommaire
         "categorie" : "Sommaire",
@@ -87,19 +87,19 @@ const catalogue = [
             {
                 "nom":'Index Pictogrames',
                 "image":"",
-                "tensions":["TE","TH","750V_3eR","850V_3eR","750V_lac","1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","rev","mir","um2","um3","um4","um5"],
+                "icones":["TE","TH","750V_3eR","850V_3eR","750V_lac","1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","rev","mir","um2","um3","um4","um5"],
                 "outOfTE":true
                 
             },
             {
                 "nom":'Si ce bandeau est bleu, le train est présent et réutilisable dans Train-Empire',
-                "image":"https://img.shields.io/badge/Dernière_mise_à_jour-05/05/2024-blue?style=for-the-badge",
-                "tensions":["TE"]
+                "image":`https://img.shields.io/badge/Dernière_mise_à_jour-${date_maj}-blue?style=for-the-badge`,
+                "icones":["TE"]
             },
             // {
             //     "nom":'Test <img src="https://img.shields.io/badge/25kV-LAC-gray?labelColor=0288D1&">',
             //     "image":"",
-            //     "tensions":[]
+            //     "icones":[]
             // },
         ]
     },
@@ -108,18 +108,18 @@ const catalogue = [
         "trains" : [
             {
                 "nom":'LNER / BR A4',
-                "image":"./res/img/trains/lner_bra4.png",
-                "tensions":[]
+                "image":"./res/img/messages/temp_indispo.png",
+                "icones":[]
             },
             {
                 "nom":'BR 52 / 1-5-0 / Type 26/27/56 - sans pare-fumée',
                 "image":"./res/img/trains/BR52_S.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'BR 52 / 1-5-0 / Type 26/27/56 - avec pare-fumée',
                 "image":"./res/img/trains/BR52_A.png",
-                "tensions":[]
+                "icones":[]
             }
         ]
     },
@@ -129,82 +129,87 @@ const catalogue = [
             {
                 "nom":"2CC2 61000 (f)",
                 "image":"./res/img/trains/2CC2.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"BR 218",
                 "image":"./res/img/trains/br218.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"BB 62400 / NS 2400",
                 "image":"./res/img/trains/BB62400.png",
-                "tensions":["TH","um4"]
+                "icones":["TH","um4"]
             },
             {
                 "nom":"BB 67400",
                 "image":"./res/img/trains/template_BB67400.png",
-                "tensions":["TH","um2","rev"]
+                "icones":["TH","um2","rev"]
             },
             {
                 "nom":"BB 73000",
                 "image":"./res/img/trains/BB73000.png",
-                "tensions":["TH"]
+                "icones":["TH"]
+            },
+            {
+                "nom":"BB 75000 / BB 75300 / Prima DE2400 (f)",
+                "image":"./res/img/trains/BB75000.png",
+                "icones":["TH"]
             },
             {
                 "nom":"CC 72000 - attelages Scharfenberg",
                 "image":"./res/img/trains/CC72000_TGV_usine.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"CC 73000",
                 "image":"./res/img/trains/CC73000.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"CC 73000 - bas de caisse gris",
                 "image":"./res/img/trains/CC73000_bas gris.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'Class 08',
                 "image":["./res/img/trains/Class08.png","./res/img/trains/Class08_r.png"],
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'Class 08 - neutre UK',
                 "image":["./res/img/trains/Class08b.png","./res/img/trains/Class08b_r.png"],
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'Class 08 - neutre UK, toit gris',
                 "image":["./res/img/trains/Class08fb.png","./res/img/trains/Class08fb_r.png"],
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'Class 41 (II)',
                 "image":"./res/img/trains/BR Class 41.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'Class 45',
                 "image":"./res/img/trains/Class45.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"D445",
                 "image":"./res/img/trains/D445.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"Série ME26",
                 "image":"./res/img/trains/Template_ME26.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'Siemens Eurorunner / ER20 - 2 versions',
                 "image":["./res/img/trains/ER20.png","./res/img/trains/template_ER20.png"],
-                "tensions":["TH"]
+                "icones":["TH"]
             }
         ],
     },
@@ -214,27 +219,32 @@ const catalogue = [
             {
                 "nom":"BB 300",
                 "image":"./res/img/trains/BB300.png",
-                "tensions":["TH","um"]
+                "icones":["TH","um2"]
+            },
+            {
+                "nom":"BB 60000",
+                "image":"./res/img/trains/BB60000.png",
+                "icones":["TH","um2"]
             },
             {
                 "nom":"BB 69200",
                 "image":"./res/img/trains/template_BB_69200.png",
-                "tensions":["TH","um"]
+                "icones":["TH","um2"]
             },
             {
                 "nom":"Class 77",
                 "image":"./res/img/trains/class77.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"HLD77",
                 "image":"./res/img/trains/HLD77.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"Vossloh G2000",
                 "image":"./res/img/trains/g2000.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
         ]
     },
@@ -244,144 +254,159 @@ const catalogue = [
             {
                 "nom":"BB 900",
                 "image":"./res/img/trains/BB900.png",
-                "tensions":["1,5kV_lac"]
+                "icones":["1,5kV_lac"]
             },
             {
                 "nom":"BB 950",
                 "image":"./res/img/trains/BB950.png",
-                "tensions":["750V_3eR"]
+                "icones":["750V_3eR"]
             },
             {
                 "nom":"BB 8100",
                 "image":"./res/img/trains/BB 8100.png",
-                "tensions":["1,5kV_lac"]
+                "icones":["1,5kV_lac"]
             },
             {
                 "nom":"BB 9300",
                 "image":"./res/img/trains/BB9300.png",
-                "tensions":["1,5kV_lac"]
+                "icones":["1,5kV_lac"]
             },
             {
                 "nom":"BB 22200",
                 "image":"./res/img/trains/BB22200.png",
-                "tensions":["1,5kV_lac","25kV_lac"]
+                "icones":["1,5kV_lac","25kV_lac"]
             },
             {
                 "nom":"BB 26000",
                 "image":"./res/img/trains/BB26000.png",
-                "tensions":["1,5kV_lac","25kV_lac"]
+                "icones":["1,5kV_lac","25kV_lac"]
+            },
+            {
+                "nom":"BB 27000",
+                "image":"./res/img/trains/BB27000.png",
+                "icones":["1,5kV_lac","25kV_lac"]
             },
             {
                 "nom":"BB 36000",
                 "image":"./res/img/trains/BB36000_Blanc.png",
-                "tensions":["1,5kV_lac","3kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","3kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":'BB 17000',
                 "image":"./res/img/trains/17000.png",
-                "tensions":["25kV_lac"]
+                "icones":["25kV_lac"]
             },
             {
                 "nom":"BB 37000",
                 "image":"./res/img/trains/bb37000.png",
-                "tensions":["1,5kV_lac","15kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","15kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Bombardier Traxx E186",
                 "image":"./res/img/trains/e186.png",
-                "tensions":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac"]
+                "icones":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac"]
             },
             {
                 "nom":'BR 102',
                 "image":"./res/img/trains/br102.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":'BR 110',
                 "image":"./res/img/trains/Template_BR_110.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":'BR 152',
                 "image":"./res/img/trains/br152.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":'BR 155',
                 "image":"./res/img/trains/BR155.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":'BR 180 / BR 320',
                 "image":"./res/img/trains/br180.png",
-                "tensions":["3kV_lac","15kV_lac"]
+                "icones":["3kV_lac","15kV_lac"]
             },
             {
                 "nom":"BR 189 / Siemens ES64F4",
                 "image":"./res/img/trains/br189.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":"CC 9300",
                 "image":"./res/img/trains/cc9300.png",
-                "tensions":["1,5kV_lac"],
+                "icones":["1,5kV_lac"],
                 "outOfTE":true
             },
             {
                 "nom":"CC Jacquemin quadritension",
                 "image":"./res/img/trains/cc-mte-quadri.png",
-                "tensions":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac"],
+                "icones":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac"],
                 "outOfTE":false
             },
             {
                 "nom":'Class 76',
                 "image":"./res/img/trains/Class76.png",
-                "tensions":["1,5kV_lac"]
+                "icones":["1,5kV_lac"]
             },
             {
                 "nom":'Class 92',
                 "image":"./res/img/trains/Class 92j.png",
-                "tensions":["25kV_lac"]
+                "icones":["25kV_lac"]
             },
             {
                 "nom":'Class 92 - neutre UK',
                 "image":"./res/img/trains/Class 92b.png",
-                "tensions":["25kV_lac"]
+                "icones":["25kV_lac"]
             },
             {
                 "nom":'Class 419 - MLV : Motor Luggage Van',
                 "image":"./res/img/trains/Class_419.png",
-                "tensions":["750V_3eR"],
+                "icones":["750V_3eR"],
             },
             {
                 "nom":'Ee 3/3 II (CFF) / C 20150',
                 "image":"./res/img/trains/ee33.png",
-                "tensions":["15kV_lac","25kV_lac"],
+                "icones":["15kV_lac","25kV_lac"],
             },
             {
                 "nom":'FS E402B',
                 "image":"./res/img/trains/E402B.png",
-                "tensions":["1,5kV_lac","3kV_lac","25kV_lac"],
+                "icones":["1,5kV_lac","3kV_lac","25kV_lac"],
             },
             {
                 "nom":"HLE13 / Série 3000",
                 "image":"./res/img/trains/HLE13.png",
-                "tensions":["1,5kV_lac","3kV_lac","25kV_lac"],
+                "icones":["1,5kV_lac","3kV_lac","25kV_lac"],
             },
             {
                 "nom":"HLE18 (II) / HLE19",
                 "image":"./res/img/trains/HLE18.png",
-                "tensions":["1,5kV_lac","3kV_lac","25kV_lac"],
+                "icones":["1,5kV_lac","3kV_lac","25kV_lac"],
             },
             {
                 "nom":"NS 1600 Benelux",
                 "image":"./res/img/trains/NS 1600.png",
-                "tensions":["1,5kV_lac","3kV_lac","25kV_lac"],
+                "icones":["1,5kV_lac","3kV_lac","25kV_lac"],
             },
             {
                 "nom":'Re460',
                 "image":"./res/img/trains/re460.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
+            }
+        ]
+    },
+    {   // Loc Elec fret
+        "categorie" : "Locomotives électriques fret",
+        "trains" : [
+            {
+                "nom":"Ae 8/14 11801",
+                "image":"./res/img/trains/Ae_8_14_11801.png",
+                "icones":["15kV_lac"]
             }
         ]
     },
@@ -391,7 +416,7 @@ const catalogue = [
             {
                 "nom": 'BB+BB99000 (f)',
                 "image":"./res/img/trains/BBBB99000.png",
-                "tensions": ['1,5kV_lac', '25kV_lac', 'TH']
+                "icones": ['1,5kV_lac', '25kV_lac', 'TH']
             }
                 ]
     },
@@ -401,37 +426,37 @@ const catalogue = [
             {
                 "nom":'BR 515',
                 "image":"./res/img/trains/BR515.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'BR 708 / ORT 135.7',
                 "image":"./res/img/trains/BR708.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'BR 798 / VT 98',
                 "image":"./res/img/trains/VT 98.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":'X 2200',
                 "image":"./res/img/trains/x2200.png",
-                "tensions":["TH","um3"]
+                "icones":["TH","um3"]
             },
             {
                 "nom":'X 4900',
                 "image":"./res/img/trains/x4900.png",
-                "tensions":["TH","um3"]
+                "icones":["TH","um3"]
             },
             {
                 "nom":'X 73500',
                 "image":"./res/img/trains/x73500.png",
-                "tensions":["TH","um3"]
+                "icones":["TH","um3"]
             },
             {
                 "nom": 'X 310000 "Berliet"',
                 "image":"./res/img/trains/X 31000.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             }
         ]
     },
@@ -441,42 +466,42 @@ const catalogue = [
             {
                 "nom":"Class 170 / Class 171 - 2 voitures (171/7) ",
                 "image":"./res/img/trains/Class 170.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"Class 170 / Class 171 - 2 voitures (171/7), neutre UK",
                 "image":"./res/img/trains/Class 170 2c neutre.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"Class 171 - 4 voitures (171/8)",
                 "image":"./res/img/trains/Class 170 - 4c.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"Class 171 - 4 voitures (171/8), neutre UK",
                 "image":"./res/img/trains/Class 170 4c neutre.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"RTG T3000 - bande noire",
                 "image":"./res/img/trains/T3000_bn.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"S-594",
                 "image":"./res/img/trains/S594.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"Siemens ICE TD",
                 "image":"./res/img/trains/icetd.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             },
             {
                 "nom":"VT11.5",
                 "image":"./res/img/trains/VT11-5.png",
-                "tensions":["TH"]
+                "icones":["TH"]
             }
         ]
     },
@@ -486,262 +511,278 @@ const catalogue = [
             {
                 "nom":"4010",
                 "image":"./res/img/trains/4010_Blanc.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":"Alstom AGV",
                 "image":"./res/img/trains/Alstom_AGV575.png",
-                "tensions":["1,5kV_lac","25kV_lac"],
+                "icones":["1,5kV_lac","25kV_lac"],
+                "outOfTE":true
+            },
+            {
+                "nom":"Alstom Coradia Stream ICNG - 5 caisses",
+                "image":"./res/img/trains/ICNG5.png",
+                "icones":["1,5kV_lac","3kV_lac","um2"]
+            },
+            {
+                "nom":"Alstom Coradia Stream ICNG - 8 caisses",
+                "image":"./res/img/trains/ICNG8.png",
+                "icones":["1,5kV_lac","3kV_lac","um2"],
                 "outOfTE":true
             },
             {
                 "nom":"Alstom ICE Duplex (f)",
                 "image":"./res/img/trains/ICE Duplex.png",
-                "tensions":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Alstom TGV DR (f)",
                 "image":"./res/img/trains/tgv dr.png",
-                "tensions":["3kV_lac","15kV_lac","um2"],
+                "icones":["3kV_lac","15kV_lac","um2"],
             },
             {
                 "nom":"Alstom TGV Duplex - toutes variantes",
                 "image":"./res/img/trains/TGV_Duplex.png",
-                "tensions":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Alstom TGV Postal",
                 "image":"./res/img/trains/tgv_postal.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Alstom TGV POS",
                 "image":"./res/img/trains/tgv-pos-template.png",
-                "tensions":["1,5kV_lac","15kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","15kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Alstom TGV PSE - trumeaux gris",
                 "image":"./res/img/trains/TGV_PSE.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Alstom TGV PSE - trumeaux blancs",
                 "image":"./res/img/trains/TGV_PSE_blanc.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"AM POST",
                 "image":"./res/img/trains/amposte.png",
-                "tensions":["3kV_lac","um2"]
+                "icones":["3kV_lac","um2"]
             },
             {
                 "nom":"Avelia Horizon / TGV-M",
                 "image":"./res/img/trains/Alstom_TGV_M_11c_Neutre.png",
-                "tensions":["1,5kV_lac","25kV_lac"],
+                "icones":["1,5kV_lac","25kV_lac"],
                 "outOfTE":true
             },
             {
                 "nom":"BR 1462",
                 "image":"./res/img/trains/BR 1462.png",
-                "tensions":["15kV_lac","25kV_lac"]
+                "icones":["15kV_lac","25kV_lac"]
             },
             {
                 "nom":"BR 403 (I) / ET 403",
                 "image":"./res/img/trains/BR403I.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":"BR 425",
                 "image":"./res/img/trains/Template_BR_425.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":"BR 481.5",
                 "image":"./res/img/trains/BR481.png",
-                "tensions":["750V_3eR","um2"]
+                "icones":["750V_3eR","um2"]
             },    
             {
                 "nom":'Class 421 - neutre UK',
                 "image":"./res/img/trains/BR Class 421.png",
-                "tensions":["750V_3eR"]
+                "icones":["750V_3eR"]
             },
             {
                 "nom":'Class 442 - neutre UK (1s)',
                 "image":"./res/img/trains/Template_Class_442_1s.png",
-                "tensions":["750V_3eR"]
+                "icones":["750V_3eR"]
             },
             {
                 "nom":'Class 442 - neutre UK (2s)',
                 "image":"./res/img/trains/Template_Class_442.png",
-                "tensions":["750V_3eR"]
+                "icones":["750V_3eR"]
             },
             {
                 "nom":'Class 442 - neutre UK (refurb)',
                 "image":"./res/img/trains/NSE_Class_442_refurb.png",
-                "tensions":["750V_3eR"]
+                "icones":["750V_3eR"]
             },
             {
                 "nom":"Class 460 - neutre UK, première caisse",
                 "image":"./res/img/trains/BR Class 460 - 1ere.png",
-                "tensions":["750V_3eR"]
+                "icones":["750V_3eR"]
             },
             {
                 "nom":"Coradia stream DC",
                 "image":"./res/img/trains/Coradia_Stream_ETR_104_png.png",
-                "tensions":["1,5kV_lac","3kV_lac"]
+                "icones":["1,5kV_lac","3kV_lac"]
             },
             {
                 "nom":"ETR 521",
                 "image":"./res/img/trains/ETR 521.png",
-                "tensions":["3kV_lac"]
+                "icones":["3kV_lac"]
             },
             {
                 "nom":"S-102 / S-112",
                 "image":"./res/img/trains/Talgo_S102_Blanche.png",
-                "tensions":["25kV_lac"],
+                "icones":["25kV_lac"],
                 "outOfTE":true
             },
             {
                 "nom":"Siemens ICE 1 / BR 401 ",
                 "image":"./res/img/trains/ICE1.png",
-                "tensions":["15kV_lac"]
+                "icones":["15kV_lac"]
             },
             {
                 "nom":"Siemens ICE 2 / BR 402",
                 "image":"./res/img/trains/ICE2.png",
-                "tensions":["15kV_lac","um2"]
+                "icones":["15kV_lac","um2"]
             },
             {
                 "nom":"Siemens ICE 2 / BR 402 - version bi-motrices",
                 "image":"./res/img/trains/ICE2 - 2 motrices.png",
-                "tensions":["15kV_lac","um2"],
+                "icones":["15kV_lac","um2"],
                 "outOfTE":true
             },
             {
                 "nom":"Siemens ICE 3M / BR 406",
                 "image":"./res/img/trains/BR 406.png",
-                "tensions":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Siemens TGV",
                 "image":"./res/img/trains/Siemens TGV.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"],
+                "icones":["1,5kV_lac","25kV_lac","um2"],
                 "outOfTE":true
             },
             {
                 "nom":'Skoda CityElefant',
                 "image":"./res/img/trains/cd471.png",
-                "tensions":["3kV_lac"],
+                "icones":["3kV_lac"],
                 "outOfTE":true
             },
             {
                 "nom":'Z 2000',
                 "image":"./res/img/trains/Z2000.png",
-                "tensions":["1,5kV_lac"]
+                "icones":["1,5kV_lac"]
             },
             {
                 "nom":'Z 5100 Rénovation lourde (2c)',
                 "image":"./res/img/trains/Z 5100 2c.png",
-                "tensions":["1,5kV_lac"],
+                "icones":["1,5kV_lac"],
                 "outOfTE":true
             },
             {
                 "nom":'Z 5100 Rénovation lourde (3c)',
                 "image":"./res/img/trains/Z 5100 3c.png",
-                "tensions":["1,5kV_lac"],
+                "icones":["1,5kV_lac"],
                 "outOfTE":true
             },
             {
                 "nom":'Z 5100 Rénovation lourde (4c)',
                 "image":"./res/img/trains/Z 5100 4c.png",
-                "tensions":["1,5kV_lac"],
+                "icones":["1,5kV_lac"],
                 "outOfTE":true
             },
             {
                 "nom":'Z 5100 Rénovation lourde (2c)',
                 "image":"./res/img/trains/Z 5100 3r.png",
-                "tensions":["750V_3eR"],
+                "icones":["750V_3eR"],
                 "outOfTE":true
             },
             {
                 "nom":'Z 7100 Modernisée',
                 "image":["./res/img/trains/Z7100_GRG_R.png","./res/img/trains/Z7100_GRG.png"],
-                "tensions":["1,5kV_lac","mir"]
+                "icones":["1,5kV_lac","mir"]
             },
             {
                 "nom":'Z 7300',
                 "image":"./res/img/trains/Z_7300.png",
-                "tensions":["1,5kV_lac","um3"]
+                "icones":["1,5kV_lac","um3"]
             },
             {
                 "nom":'Z 8100 / MI 79 / MI 84',
                 "image":"./res/img/trains/MI79.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":'Z 8800',
                 "image":"./res/img/trains/Z8800.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Z 20500 - toit gris",
                 "image":"./res/img/trains/Z20500__Blanc.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Z 20900 - toit blanc",
                 "image":"./res/img/trains/Z20900_Blanc.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Z 23000",
                 "image":"./res/img/trains/Z23000.png",
-                "tensions":["1,5kV_lac","um8"]
+                "icones":["1,5kV_lac","um8"]
+            },
+            {
+                "nom":"Z 23500",
+                "image":"./res/img/trains/Z23500.png",
+                "icones":["1,5kV_lac","25kV_lac","um4"]
             },
             {
                 "nom":"Z 24500",
                 "image":"./res/img/trains/Z24500_Blanc.png",
-                "tensions":["1,5kV_lac","25kV_lac","um3"]
+                "icones":["1,5kV_lac","25kV_lac","um3"]
             },
             {
                 "nom":"Z 26500",
                 "image":"./res/img/trains/Z26500_Blanc.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Z 50000 - vitres noires",
                 "image":"./res/img/trains/Z50000_Blanc.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Z 50000 - vitres blanches",
                 "image":"./res/img/trains/Z50000_Blanc3.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Z 50000 - sans contour vitres",
                 "image":"./res/img/trains/Z50000_Blanc2.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":'Z 51500',
                 "image":"./res/img/trains/Z51500.png",
-                "tensions":["1,5kV_lac","25kV_lac","um3"]
+                "icones":["1,5kV_lac","25kV_lac","um3"]
             },
             {
                 "nom":"Z 54500",
                 "image":"./res/img/trains/Template_Z54500.png",
-                "tensions":["1,5kV_lac","25kV_lac","15kV_lac","um3"]
+                "icones":["1,5kV_lac","25kV_lac","15kV_lac","um3"]
             },
             {
                 "nom":"Z 56300",
                 "image":"./res/img/trains/Z56300.png",
-                "tensions":["1,5kV_lac","25kV_lac","um3"]
+                "icones":["1,5kV_lac","25kV_lac","um3"]
             },
             {
                 "nom":"Z 57000",
                 "image":"./res/img/trains/Z57000.png",
-                "tensions":["1,5kV_lac","25kV_lac","um2"]
+                "icones":["1,5kV_lac","25kV_lac","um2"]
             }
             
         ]
@@ -752,13 +793,13 @@ const catalogue = [
             {
                 "nom":"Régiolis 6 caisses - vitres noires",
                 "image":"./res/img/trains/regiolis-6c-1.png",
-                "tensions":["TH","1,5kV_lac","15kV_lac","25kV_lac","um3"]
+                "icones":["TH","1,5kV_lac","15kV_lac","25kV_lac","um3"]
                 
             },
             {
                 "nom":"Régiolis 6 caisses - vitres blanches",
                 "image":"./res/img/trains/regiolis-6c.png",
-                "tensions":["TH","1,5kV_lac","15kV_lac","25kV_lac","um3"]
+                "icones":["TH","1,5kV_lac","15kV_lac","25kV_lac","um3"]
                 
             },
         ]
@@ -767,262 +808,323 @@ const catalogue = [
         "categorie" : "Voitures de voyageurs",
         "trains" : [
             {
+                "nom":'Bbd 499 "Rekowagen" ex-DR',
+                "image":"./res/img/trains/Bbd_499_Rekowagen.png",
+                "icones":[],
+                "outOfTE":true
+            },
+            {
                 "nom":'BR 998.0 - Remorque VT78',
                 "image":"./res/img/trains/BR998.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'BR 456.0 / Modus-Wagen B',
                 "image":"./res/img/trains/modus wagen B.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'BR 484.0 / Modus-Wagen ABx',
                 "image":["./res/img/trains/ABx.png","./res/img/trains/ABxr.png"],
-                "tensions":["mir"]
+                "icones":["mir"]
             },
             {
                 "nom":'Corail NG88 A10 / NG88 B11',
                 "image":"./res/img/trains/NG88 B11&A10.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail NG88 B5r',
                 "image":"./res/img/trains/NG88 B5r.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail NG88 B7Dx',
                 "image":["./res/img/trains/NGG B7Dx.png","./res/img/trains/NGG B7Dxr.png"],
-                "tensions":["mir"]
+                "icones":["mir"]
             },
             {
                 "nom":'Corail VRrtu (f) - 2 versions',
                 "image":["./res/img/trains/vrrtu.png","./res/img/trains/vrrtu2.png"],
-                "tensions":[],
+                "icones":[],
             },
             {
                 "nom":'Corail VTU A5B5 / VTU82 A10 / VTU82 B11 / Nouvelle Première',
                 "image":"./res/img/trains/VTU A5B5.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VTU A10 / VTU B11',
                 "image":"./res/img/trains/VTU A10-B11.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VTU B5r',
                 "image":"./res/img/trains/VTU B5r.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VTU B7 PMR',
                 "image":"./res/img/trains/VTU B7 PMR.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VTU Nouvelle Première Bar',
                 "image":"./res/img/trains/VTU 1ere Bar.png",
-                "tensions":[],
+                "icones":[],
                 "outOfTe":true
             },
             {
                 "nom":'Corail VU A3B4r',
                 "image":"./res/img/trains/VU A3B4r.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU A4B6',
                 "image":"./res/img/trains/VU A4B6.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU A9',
                 "image":"./res/img/trains/VU A9.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU A9c',
                 "image":"./res/img/trains/VU A9c.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU A10',
                 "image":"./res/img/trains/VU A10.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU AcBc',
                 "image":"./res/img/trains/VU AcBc.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU B3Su',
                 "image":"./res/img/trains/VU B3Su.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU B5ux',
                 "image":"./res/img/trains/VUB5ux.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU B5uxh',
                 "image":["./res/img/trains/VU B5uxh.png","./res/img/trains/VU B5uxhr.png"],
-                "tensions":["mir"]
+                "icones":["mir"]
             },
             {
                 "nom":'Corail VU B6Du',
                 "image":"./res/img/trains/VU B6Du.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU B6Dux',
                 "image":["./res/img/trains/B6Dux.png","./res/img/trains/B6Duxr.png"],
-                "tensions":["mir"]
+                "icones":["mir"]
             },
             {
                 "nom":'Corail VU B7uh',
                 "image":"./res/img/trains/VU B7uh.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU B9ux',
                 "image":"./res/img/trains/VU B9ux.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU B10cx',
                 "image":"./res/img/trains/VU B10cx.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU B11',
                 "image":"./res/img/trains/VU B11.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU Cabine 8',
                 "image":"./res/img/trains/VU Cabine 8.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU Du',
                 "image":"./res/img/trains/VU Du.png",
-                "tensions":[],
+                "icones":[],
                 "outOfTe": true
             },
             {
                 "nom":'Corail VU Infra',
                 "image":"./res/img/trains/vu-infra.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Corail VU Lunea Services',
                 "image":"./res/img/trains/VU Lunéa.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'DB Avmz 111',
                 "image":"./res/img/trains/avmz111.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'DB Bm 235',
                 "image":"./res/img/trains/bm235.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'DB Bpmz 291',
                 "image":"./res/img/trains/bpmz291.png",
-                "tensions":[]
+                "icones":[]
+            }, 
+            {
+                "nom":'Euraffaires A2t6u',
+                "image":"./res/img/trains/eura_A2t6u.png",
+                "icones":[]
+            },
+            {
+                "nom":'Euraffaires A3rtux',
+                "image":"./res/img/trains/eura_A3rtux.png",
+                "icones":[]
+            },
+            {
+                "nom":'Euraffaires A9½tu',
+                "image":"./res/img/trains/eura_A912tu.png",
+                "icones":[]
+            },
+            {
+                "nom":'Grand Confort A3rtu',
+                "image":"./res/img/trains/vgc_A3rtu.png",
+                "icones":[]
+            },
+            {
+                "nom":'Grand Confort A4Dtux',
+                "image":"./res/img/trains/vgc_A4Dtux.png",
+                "icones":[]
+            },
+            {
+                "nom":'Grand Confort Atu/Btu',
+                "image":"./res/img/trains/vgc_Atu_Btu.png",
+                "icones":[]
+            },
+            {
+                "nom":'Grand Confort Au/Bu',
+                "image":"./res/img/trains/vgc_Au_Bu.png",
+                "icones":[]
+            },
+            {
+                "nom":'Grand Confort B5Dtux (f)',
+                "image":"./res/img/trains/vgc_B5Dtux_fic.png",
+                "icones":[]
+            },
+            {
+                "nom":'Grand Confort B5Dux  (f)',
+                "image":["./res/img/trains/vgc_B5Dux_fic_l.png","./res/img/trains/vgc_B5Dux_fic_r.png"],
+                "icones":["mir"]
+            },
+            {
+                "nom":'Grand Confort B9 (f)',
+                "image":"./res/img/trains/vgc_B9_fic.png",
+                "icones":[]
+            },
+            {
+                "nom":'Grand Confort Vru',
+                "image":"./res/img/trains/vgc_Vru.png",
+                "icones":[]
             },
             {
                 "nom":'Plan WRD',
                 "image":["./res/img/trains/NS Plan WRD.png","./res/img/trains/NS Plan WRDr.png"],
-                "tensions":["mir"]
+                "icones":["mir"]
             },
             {
                 "nom":'UIC B10 V200',
                 "image":"./res/img/trains/UIC B10.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'UIC-F A8',
                 "image":"./res/img/trains/uic-f-a8.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'UIC-F B5r',
                 "image":"./res/img/trains/uic-f-b5r.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'UIC-F B8c',
                 "image":"./res/img/trains/uic-f-b8c.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'UIC-F B9',
                 "image":"./res/img/trains/uic-f-b9.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'UIC-F VL',
                 "image":"./res/img/trains/uic-f-vl.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'USI grise',
                 "image":"./res/img/trains/USI grise.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'USI II',
                 "image":"./res/img/trains/USI II.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'USI II Bar',
                 "image":"./res/img/trains/USI II Bar.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":"Tronçon Duplex Cooper",
                 "image":"./res/img/trains/troncon_duplex.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":"VB2N - Rame type",
                 "image":"./res/img/trains/VB2N_template.png",
-                "tensions":[]
+                "icones":[]
                 
             },
             {
                 "nom":"VE2N",
                 "image":"./res/img/trains/ve2n.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'RailJet (type ÖBB) - Rame type',
                 "image":"./res/img/trains/railjet.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":'Voiture pilote ex-Z2',
                 "image":["./res/img/trains/Z2r.png","./res/img/trains/Z2.png"],
-                "tensions":["mir"]
+                "icones":["mir"]
             },
             {
                 "nom":'ZRx 17100',
                 "image":["./res/img/trains/ZRx 17100.png","./res/img/trains/ZRx 17100.png"],
-                "tensions":["mir"]
+                "icones":["mir"]
             },
             {
                 "nom":'ZR 27100/200',
                 "image":["./res/img/trains/ZR 27100.png","./res/img/trains/ZR 27100r.png"],
-                "tensions":["mir"],
+                "icones":["mir"],
                 "outOfTE":true
             }
         ]
@@ -1033,7 +1135,7 @@ const catalogue = [
             {
                 "nom":'STVA TA260 Long',
                 "image":"./res/img/trains/ta260-l.png",
-                "tensions":[]
+                "icones":[]
             }
         ]
     },
@@ -1043,22 +1145,22 @@ const catalogue = [
             {
                 "nom":'ANF60',
                 "image":"./res/img/trains/ANF60.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":"Corail MC76",
                 "image":"./res/img/trains/MC76.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":"MK3 SLEP",
                 "image":"./res/img/trains/MK3 SLEP.png",
-                "tensions":[]
+                "icones":[]
             },
             {
                 "nom":"Falrrs 152",
                 "image":"./res/img/trains/Falrrs 152.png",
-                "tensions":[]
+                "icones":[]
             }
         ]
     },
@@ -1068,12 +1170,12 @@ const catalogue = [
             {
                 "nom":"Siemens Avanto / U 25500",
                 "image":"./res/img/trains/U25500_blanc.png",
-                "tensions":["750V_lac","25kV_lac"]
+                "icones":["750V_lac","25kV_lac"]
             },
             {
                 "nom":"TTFS : Tram-Train Français Standard - compatible 1.5kV/25kV selon version",
                 "image":"./res/img/trains/ttfs.png",
-                "tensions":["750V_lac","1,5kV_lac","25kV_lac"]
+                "icones":["750V_lac","1,5kV_lac","25kV_lac"]
             },
         ]
     }

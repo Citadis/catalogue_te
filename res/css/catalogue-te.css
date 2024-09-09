@@ -94,7 +94,7 @@ footer{
     overflow: hidden;
 }
 .template{
-    background-image: url("../img/Voie_25kV.png");
+    background-image: url("../img/icones/Voie_25kV.png");
     background-size: contain;
     min-height: 90px;
     position: relative;
@@ -114,12 +114,12 @@ footer{
     font-size: large;
 }
 .outOfTE{background-color: var(--gris-te); color: black;}
-.tensions{
+.icones{
     position: absolute;
     top: 30%;
     right: 0;
 }
-.tension{
+.icone{
     max-width: 50px;
     border: 1px solid black;
     margin: 5px;
