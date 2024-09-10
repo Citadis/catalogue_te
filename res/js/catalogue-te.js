@@ -174,17 +174,17 @@ const catalogue = [
             {
                 "nom":'Class 08',
                 "image":["./res/img/trains/Class08.png","./res/img/trains/Class08_r.png"],
-                "icones":["TH"]
+                "icones":["TH","mir"]
             },
             {
                 "nom":'Class 08 - neutre UK',
                 "image":["./res/img/trains/Class08b.png","./res/img/trains/Class08b_r.png"],
-                "icones":["TH"]
+                "icones":["TH","mir"]
             },
             {
                 "nom":'Class 08 - neutre UK, toit gris',
                 "image":["./res/img/trains/Class08fb.png","./res/img/trains/Class08fb_r.png"],
-                "icones":["TH"]
+                "icones":["TH","mir"]
             },
             {
                 "nom":'Class 41 (II)',
@@ -269,6 +269,11 @@ const catalogue = [
             {
                 "nom":"BB 9300",
                 "image":"./res/img/trains/BB9300.png",
+                "icones":["1,5kV_lac"]
+            },
+            {
+                "nom":"BB 15000",
+                "image":"./res/img/trains/BB15000.png",
                 "icones":["1,5kV_lac"]
             },
             {
@@ -370,7 +375,7 @@ const catalogue = [
             },
             {
                 "nom":'Ee 3/3 II (CFF) / C 20150',
-                "image":"./res/img/trains/ee33.png",
+                "image":"./res/img/trains/Ee33.png",
                 "icones":["15kV_lac","25kV_lac"],
             },
             {
@@ -845,8 +850,8 @@ const catalogue = [
             },
             {
                 "nom":'Corail VRrtu (f) - 2 versions',
-                "image":["./res/img/trains/vrrtu.png","./res/img/trains/vrrtu2.png"],
-                "icones":[],
+                "image":["./res/img/trains/VRrtu_fic_l.png","./res/img/trains/VRrtu_fic_r.png"],
+                "icones":["mir"],
             },
             {
                 "nom":'Corail VTU A5B5 / VTU82 A10 / VTU82 B11 / Nouvelle Première',
