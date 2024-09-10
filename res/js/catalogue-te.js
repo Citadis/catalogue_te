@@ -298,17 +298,17 @@ const catalogue = [
             },
             {
                 "nom":'BB 17000',
-                "image":"./res/img/trains/17000.png",
+                "image":"./res/img/trains/BB17000.png",
                 "icones":["25kV_lac"]
             },
             {
                 "nom":"BB 37000",
-                "image":"./res/img/trains/bb37000.png",
+                "image":"./res/img/trains/BB37000.png",
                 "icones":["1,5kV_lac","15kV_lac","25kV_lac","um2"]
             },
             {
                 "nom":"Bombardier Traxx E186",
-                "image":"./res/img/trains/e186.png",
+                "image":"./res/img/trains/E186.png",
                 "icones":["1,5kV_lac","3kV_lac","15kV_lac","25kV_lac"]
             },
             {
