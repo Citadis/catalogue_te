@@ -106,7 +106,7 @@ footer{
     position: absolute;
     bottom: 2px;
 }
-.nom{
+.nom, .teHelperLink{
     background-color: var(--bleu-te);
     color: white;
     /* border-radius: 0 0 20px 20px ; */
@@ -114,6 +114,9 @@ footer{
     font-size: large;
 }
 .outOfTE{background-color: var(--gris-te); color: black;}
+.teHelperLink a{
+    color: white;
+}
 .icones{
     position: absolute;
     top: 30%;
