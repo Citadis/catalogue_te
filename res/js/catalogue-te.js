@@ -108,9 +108,9 @@ const catalogue = [
             },
             {
                 "nom":'Si ce bandeau est bleu, le train est présent et réutilisable dans Train-Empire',
-                "image":["../messages/M","../messages/A","../messages/J","../messages/_deux-points",
-                    "../messages/0","../messages/9","../messages/_slash",
-                    "../messages/0","../messages/5","../messages/_slash",
+                "image":["../messages/M","../messages/A","../messages/J","../messages/+deux-points",
+                    "../messages/0","../messages/9","../messages/+slash",
+                    "../messages/0","../messages/5","../messages/+slash",
                     "../messages/2","../messages/0","../messages/2","../messages/5"],
                 "icones":["TE"],
                 "legacyTEavailable":true
@@ -1439,7 +1439,7 @@ const catalogue = [
             },
             {
                 "nom":'MK1 TSO',
-                "image":"VoVo/mk1_TSO",
+                "image":"VoVo/mk1_tso",
                 "icones":[],
                 //"idTE":[]
             },
