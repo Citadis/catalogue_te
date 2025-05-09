@@ -108,9 +108,8 @@ const catalogue = [
             },
             {
                 "nom":'Si ce bandeau est bleu, le train est présent et réutilisable dans Train-Empire',
-                //"image":`https://img.shields.io/badge/Dernière_mise_à_jour-${date_maj}-blue?style=for-the-badge`,
                 "image":["../messages/M","../messages/A","../messages/J","../messages/_deux-points",
-                    "../messages/0","../messages/8","../messages/_slash",
+                    "../messages/0","../messages/9","../messages/_slash",
                     "../messages/0","../messages/5","../messages/_slash",
                     "../messages/2","../messages/0","../messages/2","../messages/5"],
                 "icones":["TE"],
@@ -1018,13 +1017,13 @@ const catalogue = [
             },
             {
                 "nom":"Z 27500 - 3 caisses",
-                "image":"AmEl/Z27500_3c",
+                "image":"AmEl/z27500_3c",
                 "icones":["1,5kV_lac","25kV_lac","um3"],
                 "idTE":[3764,202,3730,1712]
             },
             {
                 "nom":"Z 27500 - 4 caisses",
-                "image":"AmEl/Z27500_4c",
+                "image":"AmEl/z27500_4c",
                 "icones":["1,5kV_lac","25kV_lac","um3"],
                 "idTE":[203,796,3101,542,601]
             },
